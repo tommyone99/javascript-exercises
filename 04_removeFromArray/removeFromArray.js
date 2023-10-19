@@ -1,12 +1,14 @@
-const removeFromArray = function(array, elementToRemove, optionalElement) {
+const removeFromArray = function(array, elementToRemove, ...optionalElement) {
     let newArray = [];
-    outer: for (let i = 0; i < array.length; i++) {
+    cursor:for (let i = 0; i < array.length; i++) {
         if (array[i] === elementToRemove) {
             continue;
         }
         if (optionalElement != undefined) {
-            if (array[i] === optionalElement) {
-            continue outer;
+            for (element of optionalElement) {
+                if (array[i] === element) {
+                    continue cursor;
+                }
             }
         }
         newArray.push(array[i]);
