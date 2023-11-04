@@ -1,22 +1,27 @@
 const add = function(a, b) {
-	c = a + b;
+	let c = a + b;
   return c;
 };
 
 const subtract = function(a, b) {
-	c = a - b;
+	let c = a - b;
   return c;
 };
 
 const sum = function(arr) {
-	let sum = arr.reduce((a, b) => {
-    return a + b;
+	let adder = arr.reduce((total, num) => {
+    return total + num;
   }, 0);
-  return sum;
+
+  return adder;
 };
 
-const multiply = function() {
+const multiply = function(arr) {
+  let multiplier = arr.reduce((total, num) => {
+    return total * num;
+  });
 
+  return multiplier;
 };
 
 const power = function() {
