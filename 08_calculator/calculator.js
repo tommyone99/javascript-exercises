@@ -29,7 +29,21 @@ const power = function(a, b) {
   return c;
 };
 
-const factorial = function() {
+const factorial = function(num) {
+  if (num == 0) {
+    return 1;
+  }
+  else if (num == 1) {
+    return 1;
+  }
+  else if (num > 1){
+    let total = num;
+    for (let i = 1; i < num - 1; i++){
+      let add = i * total;
+      total += add;
+    }
+    return total;
+  }
 	
 };
 
