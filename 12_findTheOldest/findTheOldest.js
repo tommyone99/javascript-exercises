@@ -1,5 +1,4 @@
 const findTheOldest = function(people) {
-<<<<<<< HEAD
     //get current time for current age calculation
     const date = new Date();
     
@@ -16,13 +15,6 @@ const findTheOldest = function(people) {
     people.sort((a, b) => (a.lifeLived > b.lifeLived) ? 1 : -1);
 
     return people.pop();
-=======
-
-    people.forEach(person => {
-        person.lifeLived = person.yearOfDeath - person.yearOfBirth;
-    })
-
->>>>>>> f9697529911df452060dc0246cf91a173eb1f74d
     
 };
 
